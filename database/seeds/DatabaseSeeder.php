@@ -11,6 +11,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        users::create([
+            'lname' => 'Muhammad Junaid',
+            'fname' => 'Akhter',
+            'email' => 'malikjunaid896@gmail.com',
+            'company' => 'Greyneon',
+            'password' => Hash::make('admin'),
+            'role' => 2
+        ]);
+        users::create([
+            'lname' => 'Employee',
+            'fname' => 'Employee',
+            'email' => 'muhammad.junaid.greyneon@gmail.com',
+            'company' => 'Greyneon',
+            'password' => Hash::make('secret'),
+            'role' => 2
+        ]);
     }
 }
